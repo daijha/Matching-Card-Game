@@ -35,19 +35,18 @@ h1 {
   width: 84vw;
   margin-top: 36px;
   margin-left: 40px;
-  display:flex;
+  display: flex;
   align-items: space-evenly;
 }
-#icon{
-border:1px solid pink;
-border-radius:52px;
-width:8vw;
-height:8vh;
-margin: 0px 48px;
+#icon {
+  border: 1px solid pink;
+  border-radius: 52px;
+  width: 8vw;
+  height: 8vh;
+  margin: 0px 48px;
 }
-button{
-    border-radius:52px;
-
+button {
+  border-radius: 52px;
 }
 
 #cardBox {
@@ -57,14 +56,14 @@ button{
   width: 84vw;
   margin-top: 36px;
   margin-left: 38px;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
 }
-#card{
-border:1px solid rgb(143, 17, 13);
-border-radius:52px;
-width:12vw;
-height:20vh;
-margin:28px;
-margin-left:36px;
+#card {
+  border: 1px solid rgb(143, 17, 13);
+  border-radius: 52px;
+  width: 12vw;
+  height: 20vh;
+  margin: 28px;
+  margin-left: 36px;
 }
