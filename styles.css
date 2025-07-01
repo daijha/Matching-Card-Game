@@ -1,11 +1,15 @@
 body {
-  border: 3px solid orange;
+  /* border: 3px solid orange; */
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family:monospace;
+  color: white;
+background-color: black;
 }
+
 #gameContainer {
   border: 1px solid black;
   border-radius: 92px;
@@ -22,35 +26,52 @@ body {
   margin-left: 40px;
   margin-top: 16px;
   text-align: center;
-  padding: 2px;
+  
+
 }
 h1 {
-  font-size: 44px;
+  font-size: 28px;
 }
 
 #progressBar {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   border-radius: 92px;
   height: 8vh;
   width: 84vw;
   margin-top: 36px;
   margin-left: 40px;
   display: flex;
-  align-items: space-evenly;
+  justify-content: space-evenly;
 }
-#icon {
-  border: 1px solid pink;
+.icon {
+  /* border: 1px solid pink; */
   border-radius: 52px;
   width: 8vw;
   height: 8vh;
   margin: 0px 48px;
+  
 }
+.icon img{
+    height:12vh;
+    width:6vw;
+    margin-left: 12px;
+    border-radius: 40px;
+/*   
+    border: 2px solid red; */
+}
+
 button {
-  border-radius: 52px;
+  border-radius:120px;
+  height:68px;
+  margin-top:12px;
+  padding:12px;
+  text-align:center; 
+  text-align:center;
+  background-color: #af6ec2;
 }
 
 #cardBox {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 92px;
   height: 56vh;
   width: 84vw;
@@ -59,11 +80,24 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
-#card {
+.card {
   border: 1px solid rgb(143, 17, 13);
   border-radius: 52px;
   width: 12vw;
-  height: 20vh;
+  height: 32vh;
   margin: 28px;
   margin-left: 36px;
+
+  
+  
+}
+.card img{
+     border-radius: 12px;
+    height:24vh;
+    width:10vw;
+    margin-left:12px ;
+    /* border: 2px solid red; */
+}
+.card img:hover{
+   border: 2px solid white, 
 }
