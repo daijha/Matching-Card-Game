@@ -19,7 +19,7 @@ body {
 }
 
 #name {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   border-radius: 92px;
   height: 12vh;
   width: 84vw;
@@ -83,7 +83,7 @@ button {
   flex-wrap: wrap;
 }
 .card {
-  border: 1px solid rgb(143, 17, 13);
+  /* border: 1px solid rgb(143, 17, 13); */
   border-radius: 52px;
   width: 12vw;
   height: 32vh;
