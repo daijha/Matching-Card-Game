@@ -5,9 +5,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family:monospace;
+  font-family: monospace;
   color: white;
-background-color: black;
+  background-color: black;
 }
 
 #gameContainer {
@@ -26,8 +26,6 @@ background-color: black;
   margin-left: 40px;
   margin-top: 16px;
   text-align: center;
-  
-
 }
 h1 {
   font-size: 28px;
@@ -49,25 +47,29 @@ h1 {
   width: 8vw;
   height: 8vh;
   margin: 0px 48px;
-  
 }
-.icon img{
-    height:12vh;
-    width:6vw;
-    margin-left: 12px;
-    border-radius: 40px;
-/*   
+.icon img {
+  height: 12vh;
+  width: 6vw;
+  margin-left: 12px;
+  border-radius: 40px;
+  /*   
     border: 2px solid red; */
 }
 
 button {
-  border-radius:120px;
-  height:68px;
-  margin-top:12px;
-  padding:12px;
-  text-align:center; 
-  text-align:center;
-  background-color: #af6ec2;
+  border:1px solid rgb(106, 62, 122);
+  border-radius: 16px;
+  height: 44px;
+  width:80px;
+  margin-top: 24px;
+  padding:6px;
+  color :black;
+  font-weight:bold;
+  text-shadow: 1px 1px 1.6px rgb(68, 122, 161) ;
+  text-align: center;
+  text-align: center;
+  background: linear-gradient(to right, rgb(97, 96, 187), rgb(128, 0, 128));
 }
 
 #cardBox {
@@ -87,17 +89,42 @@ button {
   height: 32vh;
   margin: 28px;
   margin-left: 36px;
+  position: relative; /* relative  to the container*/
+}
 
-  
-  
+.card img {
+  border-radius: 12px;
+  height: 24vh;
+  width: 10vw;
+  margin-left: 12px;
+position:absolute;
+
+
+  /* border: 2px solid red; */
 }
-.card img{
-     border-radius: 12px;
-    height:24vh;
-    width:10vw;
-    margin-left:12px ;
-    /* border: 2px solid red; */
+.card img:hover {
+  border: 2px solid white;
 }
-.card img:hover{
-   border: 2px solid white, 
+
+.cardFlip{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
+.card.flipped .cardFlip {
+  transform: rotateY(180deg);
+}
+.cardOuter, .cardInner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+
+.cardInner {
+  transform: rotateY(180deg);
+}
+
