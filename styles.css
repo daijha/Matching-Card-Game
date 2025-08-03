@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Happy+Monkey&family=Playpen+Sans:wght@100..800&display=swap');
+
+
 body {
   /* border: 3px solid orange; */
   height: 100vh;
@@ -5,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: monospace;
+  font-family: 'Baloo 2';
   color: white;
   background-color: black;
 }
@@ -111,16 +114,16 @@ position:absolute;
   width: 100%;
   height: 100%;
   transition: transform 0.6s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d;/**/
 }
 .card.flipped .cardFlip {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* this gives the flip effect*/
 }
 .cardOuter, .cardInner {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* shows whether the back of the card shows or not*/ 
   border-radius: 12px;
 }
 

@@ -15,7 +15,7 @@ card.forEach((card) => {
         card.classList.add("flipped"); // flipped is the new class created for the flip animation in css
     }
 
-    card.addEventListener("click", function () {
+    card.addEventListener("click", function () { // THIS IS WHERE YOU MAY NEED TO REVISIT SO THE CARD FLIPS BACK OVER
         if (locked === false) {
             // when you can still select
             card.style.border = "2px solid white";
@@ -32,11 +32,13 @@ card.forEach((card) => {
         }
     });
 
+// uses js dataset properties to grab the attributes placed in html using data-
     function message2() {
-        if (selectedCards[0].dataset.pic === selectedCards[1].dataset.pic) {
+        if (selectedCards[0].dataset.pic === selectedCards[1].dataset.pic) {//.dataset.pic ... grabs the picture ...
             message.textContent = "its a match!";
             selectedCards[0].style.visibility = "hidden"; // this hides the card
             selectedCards[1].style.visibility = "hidden";
+            // uses the dataset pic attribute to see if they match  then hides the icon if so
             icons.forEach((icon) => {
                 if (selectedCards[0].dataset.pic === icon.dataset.pic) {
                     icon.style.visibility = "hidden";
@@ -48,13 +50,13 @@ card.forEach((card) => {
         selectedCards[0].classList.remove("flipped")// removes the class to flip the card back over 
         selectedCards[1].classList.remove("flipped")
         }
-           locked = false
-        selectedCards = [];
+           locked = false// reopens the selection 
+        selectedCards = [];// empties the card selection array 
 
     }
 })
-//icon needs to be removed for the matched cards
-//needs to flip the cards back over
+
+
 
 
 
@@ -66,7 +68,13 @@ card.forEach((card) => {
 let button = document.getElementById("button"); //allows access to the button in the dom
 //need condition for if there are still icons, the button should not appear,
 // if there are no more icons, the button appears
-button.addEventListener("click", function () {
+if (icons.forEach(icon => icon.style.visibility = "hidden")){
+      button.style.visibility ="visible"
+
+}else {//this may not work because the icons contain the button.
+    button.style.visibility === "hidden"
+   button.addEventListener("click", function () {
     //when the button is clicked,
-    location.reload(); // reload the page.
+    location.reload(); // reload the page. WE WILL NOT BE RELOADING THE PAGE WE WILL BE RESHUFFLING EVERYTHING AND RESETTING THE GAME.
 })
+}
