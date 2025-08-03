@@ -63,16 +63,15 @@ h1 {
 button {
   border:1px solid rgb(106, 62, 122);
   border-radius: 16px;
-  height: 44px;
-  width:80px;
-  margin-top: 24px;
+  height:60px;
   padding:6px;
+  margin-top: 20px;
   color :black;
+  font-family: 'Baloo 2';
   font-weight:bold;
-  text-shadow: 1px 1px 1.6px rgb(68, 122, 161) ;
+  /* text-shadow: 1px 1px 1.6px rgb(68, 122, 161) ; */
   text-align: center;
   text-align: center;
-  background: linear-gradient(to right, rgb(97, 96, 187), rgb(128, 0, 128));
 }
 
 #cardBox {
