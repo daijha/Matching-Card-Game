@@ -1,5 +1,26 @@
 let card = document.querySelectorAll(".card"); // selects the cards we see in ui
-console.log(card); //returns a node list of all the cards
+// console.log(card); //returns a node list of all the cards
+
+const cardArr = Array.from(card)// Array.from is a method that coverts array like data structures into actual arrays 
+console.log(cardArr)
+
+let cardBox = document.getElementById("cardBox")// grabs the card container 
+
+// shuffle the cards 
+function shuffle(cardArr){
+  for( let i= cardArr.length-1; i>0; i--){
+    let j = Math.floor(Math.random()*(i+1))
+    let temp = cardArr[i];
+    cardArr[i]= cardArr[j];
+    cardArr[j]= temp;
+  }
+  return cardArr
+}
+
+shuffle(cardArr).forEach(one =>{
+  cardBox.appendChild(one)
+})
+
 
 let icons = [...document.querySelectorAll(".icon img")]; // accesses only the images in the progress bar [] makes in in array format and not a nodelist
 console.log(icons);
@@ -7,6 +28,7 @@ console.log(icons);
 let message = document.querySelector("p");
 let button = document.getElementById("button"); //allows access to the button in the dom
  button.style.visibility = "hidden";// hides the button at the start of the game.
+
 
 let locked = false; // will determine if you can select or not
 let selectedCards = []; // empty array to store cards chosen
@@ -21,7 +43,7 @@ card.forEach((card) => {
     // THIS IS WHERE YOU MAY NEED TO REVISIT SO THE CARD FLIPS BACK OVER
     if (locked === false) {
       // when you can still select
-      card.style.border = "2px solid white";
+    //card.style.border = "2px solid white";
       flipCard(card);
 
       selectedCards.push(card);
@@ -71,7 +93,14 @@ function endGame() {
     button.style.visibility = "visible";
     button.addEventListener("click", function () {
       //when the button is clicked,
-      location.reload(); // reload the page. WE WILL NOT BE RELOADING THE PAGE WE WILL BE RESHUFFLING EVERYTHING AND RESETTING THE GAME.
+  location.reload()
+  
+  // !!!UNFINISHED RESHUFLLE LOGIC  
+  //     shuffle(cardArr).forEach(one =>{
+  // cardBox.appendChild(one)
+  
+  // cardArr.style.visibility === "visible"
+// // reload the page. WE WILL NOT BE RELOADING THE PAGE WE WILL BE RESHUFFLING EVERYTHING AND RESETTING THE GAME.
     });
   } else {
     //this may not work because the icons contain the button.
