@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Happy+Monkey&family=Playpen+Sans:wght@100..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Happy+Monkey&family=Playpen+Sans:wght@100..800&display=swap");
 
 body {
   /* border: 3px solid orange; */
@@ -8,39 +7,50 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   color: white;
   background-color: black;
 }
 
 #gameContainer {
-  border: 1px solid black;
+  /* border: 1px solid white; */
   border-radius: 92px;
-  height: 92vh;
-  width: 90vw;
-  display: block;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #name {
   /* border: 1px solid green; */
   border-radius: 92px;
-  height: 12vh;
-  width: 84vw;
-  margin-left: 40px;
-  margin-top: 16px;
+  height: 8vh;
+  width: 72vw;
+  margin-left: 32px;
+  margin-top: -72px;
+  margin-bottom: 40px;
   text-align: center;
 }
+
 h1 {
   font-size: 28px;
 }
-
+p {
+  font-size: 16px;
+}
+#button{
+  position: absolute;
+  top:76px;
+  right:280px;
+}
 #progressBar {
   /* border: 1px solid blue; */
   border-radius: 92px;
   height: 8vh;
-  width: 84vw;
+  width: 76vw;
   margin-top: 36px;
-  margin-left: 40px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -49,58 +59,55 @@ h1 {
   border-radius: 52px;
   width: 8vw;
   height: 8vh;
-  margin: 0px 48px;
+  margin: 0px 10px;
 }
 .icon img {
-  height: 12vh;
-  width: 6vw;
-  margin-left: 12px;
+  /* border: 2px solid red; */
+  height: 8vh;
+  width: 4vw;
+  margin-left: 30px;
   border-radius: 40px;
-  /*   
-    border: 2px solid red; */
 }
 
 button {
-  border:1px solid rgb(106, 62, 122);
+  /* border: 1px solid rgb(106, 62, 122); */
   border-radius: 16px;
-  height:60px;
-  padding:6px;
-  margin-top: 20px;
-  color :black;
-  font-family: 'Baloo 2';
-  font-weight:bold;
+  height: 40px;
+  padding: 6px;
+  margin-top: 10px;
+  color: black;
+  font-family: "Baloo 2";
+  font-weight: bold;
   /* text-shadow: 1px 1px 1.6px rgb(68, 122, 161) ; */
-  text-align: center;
   text-align: center;
 }
 
 #cardBox {
-  /* border: 1px solid red; */
+  /* border: 1px solid rgb(200, 10, 10); */
   border-radius: 92px;
-  height: 56vh;
-  width: 84vw;
-  margin-top: 36px;
-  margin-left: 38px;
+  height: 48vh;
+  width: 76vw;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
-  /* border: 1px solid rgb(143, 17, 13); */
+  /* border: 1px solid rgb(0, 94, 39); */
   border-radius: 52px;
-  width: 12vw;
-  height: 32vh;
-  margin: 28px;
+  width: 10vw;
+  height: 20vh;
+  margin: 20px;
   margin-left: 36px;
   position: relative; /* relative  to the container*/
 }
 
 .card img {
   border-radius: 12px;
-  height: 24vh;
-  width: 10vw;
+  height: 20vh;
+  width: 8vw;
   margin-left: 12px;
-position:absolute;
-
+  position: absolute;
 
   /* border: 2px solid red; */
 }
@@ -108,21 +115,22 @@ position:absolute;
   border: 2px solid white;
 }
 
-.cardFlip{
+.cardFlip {
   position: relative;
   width: 100%;
   height: 100%;
   transition: transform 0.6s;
-  transform-style: preserve-3d;/**/
+  transform-style: preserve-3d; /**/
 }
 .card.flipped .cardFlip {
   transform: rotateY(180deg); /* this gives the flip effect*/
 }
-.cardOuter, .cardInner {
+.cardOuter,
+.cardInner {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* shows whether the back of the card shows or not*/ 
+  backface-visibility: hidden; /* shows whether the back of the card shows or not*/
   border-radius: 12px;
 }
 
@@ -130,3 +138,5 @@ position:absolute;
   transform: rotateY(180deg);
 }
 
+@media (maxwidth: 600px) {
+}

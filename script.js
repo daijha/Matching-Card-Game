@@ -22,7 +22,7 @@ shuffle(cardArr).forEach(one =>{
 })
 
 
-let icons = [...document.querySelectorAll(".icon img")]; // accesses only the images in the progress bar [] makes in in array format and not a nodelist
+let icons = [...document.querySelectorAll(".icon img")]; // accesses only the images in the progress bar [] makes in in array format and not a node list
 console.log(icons);
 
 let message = document.querySelector("p");
@@ -95,7 +95,7 @@ function endGame() {
       //when the button is clicked,
   location.reload()
   
-  // !!!UNFINISHED RESHUFLLE LOGIC  
+  // !!!UNFINISHED RESHUFFLE LOGIC  
   //     shuffle(cardArr).forEach(one =>{
   // cardBox.appendChild(one)
   
