@@ -1,161 +1,161 @@
 <!DOCTYPE html>
-<h1 lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js" defer></script>
-        <title>Document</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
 
-    <body>
-        <div id="gameContainer">
-            <div id="name">
-                <h1>Card Matching Game</h1>
-                <p></p>
+<body>
+    <div id="gameContainer">
+        <div id="name">
+            <h1>Card Matching Game</h1>
+            <p></p>
+        </div>
+        <button id="button"> Play again?</button>
+        <div id="progressBar">
+            <div class="icon">
+                <img src="images/3.png" alt="Heart Icon" data-pic="Heart">
             </div>
-            <button id="button"> Play again?</button>
-            <div id="progressBar">
-                <div class="icon">
-                    <img src="images/3.png" alt="Heart Icon" data-pic="Heart">
-                </div>
-                <div class="icon">
-                    <img src="images/5.png" alt="Bow Icon" data-pic="Bow">
+            <div class="icon">
+                <img src="images/5.png" alt="Bow Icon" data-pic="Bow">
 
-                </div>
-                <div class="icon">
-                    <img src="images/7.png" alt="Pink FLower Icon" data-pic="PinkFlower">
-
-                </div>
-                <div class="icon">
-                    <img src="images/9.png" alt="Cloud Icon" data-pic="Cloud">
-
-                </div>
-                <div class="icon">
-                    <img src="images/11.png" alt="Yellow FLower Icon" data-pic="YellowFlower">
-                </div>
             </div>
+            <div class="icon">
+                <img src="images/7.png" alt="Pink FLower Icon" data-pic="PinkFlower">
 
-            <div id="cardBox">
-                <div class="card" data-pic="Heart">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/2.png" alt="Heart Card">
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="icon">
+                <img src="images/9.png" alt="Cloud Icon" data-pic="Cloud">
 
-                <div class="card" data-pic="Heart">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/2.png" alt="Heart Card">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" data-pic="Bow">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/4.png" alt="Bow Card">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" data-pic="Bow">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/4.png" alt="Bow Card">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="card" data-pic="PinkFlower">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/6.png" alt="Pink Flower Card">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" data-pic="PinkFlower">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/6.png" alt="Pink Flower Card">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" data-pic="Cloud">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/8.png" alt="Cloud Card">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" data-pic="Cloud">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/8.png" alt="Cloud Card">
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="card" data-pic="YellowFlower">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/10.png" alt="Yellow Flower Card">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="card" data-pic="YellowFlower">
-                    <div class="cardFlip">
-                        <div class="cardOuter">
-                            <img class="cardImg" src="images/1.png" alt="Back Of Card">
-                        </div>
-                        <div class="cardInner">
-                            <img class="cardImg" src="images/10.png" alt="Yellow Flower Card">
-                        </div>
-                    </div>
-                </div>
-
-
+            </div>
+            <div class="icon">
+                <img src="images/11.png" alt="Yellow FLower Icon" data-pic="YellowFlower">
             </div>
         </div>
 
-    </body>
+        <div id="cardBox">
+            <div class="card" data-pic="Heart" data-id="1">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/2.png" alt="Heart Card">
+                    </div>
+                </div>
+            </div>
 
-    </html>
+            <div class="card" data-pic="Heart" data-id="2">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/2.png" alt="Heart Card">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-pic="Bow" data-id="3">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/4.png" alt="Bow Card">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-pic="Bow" data-id="4">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/4.png" alt="Bow Card">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" data-pic="PinkFlower" data-id="5">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/6.png" alt="Pink Flower Card">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-pic="PinkFlower" data-id="6">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/6.png" alt="Pink Flower Card">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-pic="Cloud" data-id="7">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/8.png" alt="Cloud Card">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-pic="Cloud" data-id="8">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/8.png" alt="Cloud Card">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card" data-pic="YellowFlower" data-id="9">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/10.png" alt="Yellow Flower Card">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" data-pic="YellowFlower" data-id="10">
+                <div class="cardFlip">
+                    <div class="cardOuter">
+                        <img class="cardImg" src="images/1.png" alt="Back Of Card">
+                    </div>
+                    <div class="cardInner">
+                        <img class="cardImg" src="images/10.png" alt="Yellow Flower Card">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,8 +1,13 @@
-let card = document.querySelectorAll(".card"); // selects the cards we see in ui
+let card = document.querySelectorAll(".card"); // selects the divs in html with the card class(thats why the dot is used . its syntax)
 // console.log(card); //returns a node list of all the cards
 
 const cardArr = Array.from(card)// Array.from is a method that coverts array like data structures into actual arrays 
 console.log(cardArr)
+
+// to see the ids created:
+card.forEach((crd)=>{
+  console.log(crd.dataset.id)
+})
 
 let cardBox = document.getElementById("cardBox")// grabs the card container 
 
@@ -22,7 +27,7 @@ shuffle(cardArr).forEach(one =>{
 })
 
 
-let icons = [...document.querySelectorAll(".icon img")]; // accesses only the images in the progress bar [] makes in in array format and not a node list
+let icons = [...document.querySelectorAll(".icon img")]; // accesses only the images in the progress bar [] with the ... makes it an array format and not a node list
 console.log(icons);
 
 let message = document.querySelector("p");
@@ -49,15 +54,16 @@ card.forEach((card) => {
       selectedCards.push(card);
       console.log(selectedCards);
     }
-    if (selectedCards.length >= 2) {
+    if (selectedCards.length === 2) {
       locked = true;
       message.textContent = `2 cards selected`;
-      setTimeout(message2, 1000);
+      setTimeout(message2, 1000); //milliseconds
       console.log("message reached!");
     }
   });
 
   // uses js dataset properties to grab the attributes placed in html using data-
+  //ADD ID MATCH LOGIC HERE
   function message2() {
     if (selectedCards[0].dataset.pic === selectedCards[1].dataset.pic) {
       //.dataset.pic ... grabs the picture ...
