@@ -1,59 +1,64 @@
 let card = document.querySelectorAll(".card"); // selects the divs in html with the card class(thats why the dot is used . its syntax)
 // console.log(card); //returns a node list of all the cards
 
-const cardArr = Array.from(card)// Array.from is a method that coverts array like data structures into actual arrays 
-console.log(cardArr)
+const cardArr = Array.from(card); // Array.from is a method that coverts array like data structures into actual arrays
+console.log(cardArr);
 
 // to see the ids created:
-card.forEach((crd)=>{
-  console.log(crd.dataset.id)
-})
+// card.forEach((crd)=>{
+//   console.log(crd.dataset.id)
+// })
 
-let cardBox = document.getElementById("cardBox")// grabs the card container 
+let cardBox = document.getElementById("cardBox"); // grabs the card container
 
-// shuffle the cards 
-function shuffle(cardArr){
-  for( let i= cardArr.length-1; i>0; i--){
-    let j = Math.floor(Math.random()*(i+1))
+// shuffle the cards
+function shuffle(cardArr) {
+  for (let i = cardArr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
     let temp = cardArr[i];
-    cardArr[i]= cardArr[j];
-    cardArr[j]= temp;
+    cardArr[i] = cardArr[j];
+    cardArr[j] = temp;
   }
-  return cardArr
+  return cardArr;
 }
 
-shuffle(cardArr).forEach(one =>{
-  cardBox.appendChild(one)
-})
-
+shuffle(cardArr).forEach((one) => {
+  cardBox.appendChild(one);
+});
 
 let icons = [...document.querySelectorAll(".icon img")]; // accesses only the images in the progress bar [] with the ... makes it an array format and not a node list
 console.log(icons);
 
 let message = document.querySelector("p");
 let button = document.getElementById("button"); //allows access to the button in the dom
- button.style.visibility = "hidden";// hides the button at the start of the game.
-
+button.style.visibility = "hidden"; // hides the button at the start of the game.
 
 let locked = false; // will determine if you can select or not
 let selectedCards = []; // empty array to store cards chosen
+
 card.forEach((card) => {
-  let img = card.src; // card is treated as a object. gives the address of the image
+  let id = card.dataset.id; // selects the card img without using the document keyword because this function already knows card.
 
   function flipCard() {
     card.classList.add("flipped"); // flipped is the new class created for the flip animation in css
   }
 
   card.addEventListener("click", function () {
-    // THIS IS WHERE YOU MAY NEED TO REVISIT SO THE CARD FLIPS BACK OVER
+    if (selectedCards.includes(card)) {
+      message.textContent =
+        "You selected this card already! Choose another one.";
+      return;
+    }
+
     if (locked === false) {
       // when you can still select
-    //card.style.border = "2px solid white";
-      flipCard(card);
+      flipCard();
+      console.log(id); //displays id of selected card
 
       selectedCards.push(card);
       console.log(selectedCards);
     }
+
     if (selectedCards.length === 2) {
       locked = true;
       message.textContent = `2 cards selected`;
@@ -65,8 +70,11 @@ card.forEach((card) => {
   // uses js dataset properties to grab the attributes placed in html using data-
   //ADD ID MATCH LOGIC HERE
   function message2() {
-    if (selectedCards[0].dataset.pic === selectedCards[1].dataset.pic) {
-      //.dataset.pic ... grabs the picture ...
+    if (
+      selectedCards[0].dataset.pic === selectedCards[1].dataset.pic && // pics should match
+      selectedCards[0].dataset.id !== selectedCards[1].dataset.id // the ids should not match so 2 diff cards can be selected.
+    ) {
+      //.dataset.pic and .id grabs the picture and the id from html attribute ...
       message.textContent = "its a match!";
       selectedCards[0].style.visibility = "hidden"; // this hides the card
       selectedCards[1].style.visibility = "hidden";
@@ -99,17 +107,16 @@ function endGame() {
     button.style.visibility = "visible";
     button.addEventListener("click", function () {
       //when the button is clicked,
-  location.reload()
-  
-  // !!!UNFINISHED RESHUFFLE LOGIC  
-  //     shuffle(cardArr).forEach(one =>{
-  // cardBox.appendChild(one)
-  
-  // cardArr.style.visibility === "visible"
-// // reload the page. WE WILL NOT BE RELOADING THE PAGE WE WILL BE RESHUFFLING EVERYTHING AND RESETTING THE GAME.
+      location.reload();
+
+      // !!!UNFINISHED RESHUFFLE LOGIC
+      //     shuffle(cardArr).forEach(one =>{
+      // cardBox.appendChild(one)
+
+      // cardArr.style.visibility === "visible"
+      // // reload the page. WE WILL NOT BE RELOADING THE PAGE WE WILL BE RESHUFFLING EVERYTHING AND RESETTING THE GAME.
     });
   } else {
-    //this may not work because the icons contain the button.
     button.style.visibility = "hidden";
   }
 }

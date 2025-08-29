@@ -204,7 +204,7 @@ button {
     height: 20vh;
   }
 }
-@media (max-width:1024px){
+@media (max-width: 1024px) {
   #cardBox {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
