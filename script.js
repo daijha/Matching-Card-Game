@@ -103,18 +103,28 @@ function endGame() {
   //need condition for if there are still icons, the button should not appear,
   // if there are no more icons, the button appears
   if (icons.every((icon) => icon.style.visibility === "hidden")) {
+    //.every is a method used for checking all
     message.textContent = "You Won!";
     button.style.visibility = "visible";
     button.addEventListener("click", function () {
-      //when the button is clicked,
-      location.reload();
-
-      // !!!UNFINISHED RESHUFFLE LOGIC
-      //     shuffle(cardArr).forEach(one =>{
-      // cardBox.appendChild(one)
-
-      // cardArr.style.visibility === "visible"
-      // // reload the page. WE WILL NOT BE RELOADING THE PAGE WE WILL BE RESHUFFLING EVERYTHING AND RESETTING THE GAME.
+      //WHAT ACTUALLY NEEDS TO HAPPEN HERE TO RESET THE GAME:
+      //1: all the icons need to be made visible
+      icons.forEach((icon) => {
+        icon.style.visibility = "visible";
+      });
+      //2: the cards need to be shuffled again
+      shuffle(cardArr).forEach((one) => {
+        cardBox.appendChild(one);
+      });
+      //3: all the cards need to be made visible
+      cardArr.forEach((card) => {
+        card.style.visibility = "visible";
+        card.classList.remove("flipped")
+      });
+      //4: the button gets hidden after again
+      button.style.visibility = "hidden";
+      //5: the message should be empty
+      message.textContent=""
     });
   } else {
     button.style.visibility = "hidden";
