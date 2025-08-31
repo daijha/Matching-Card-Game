@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Happy+Monkey&family=Playpen+Sans:wght@100..800&display=swap");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Baloo 2", sans-serif;
+  color: white;
+  background-color: black;
+  text-align: center;
+  margin: 0; /*prevents the scrollbar*/
+}
+#box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  margin: 0;
+}
+a {
+  /* need to restyle the anchor tags */
+  font-family: inherit; /* inherit uses the same font as the font in the body*/
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  margin: 16px;
+  transition: transform 0.5s ease-in-out;
+
+}
+a:hover {
+  transform: scale(1.5); /* enlarges the text on hover*/
+  color: rgb(107, 32, 129);
+}
+#play {
+  display: flex;
+  flex-direction: column;
+}
