@@ -10,7 +10,7 @@ body {
   font-family: "Baloo 2";
   color: white;
   background-color: black;
-  margin:0; /*no scrollbar*/
+  margin:0;
 }
 
 #gameContainer {
@@ -64,8 +64,8 @@ p {
 }
 .icon img {
   /* border: 2px solid red; */
-  height: 8vh;
-  width: 4vw;
+  height: 12vh;
+  width: 4.5vw;
   margin-left: 30px;
   border-radius: 40px;
 }
